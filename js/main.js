@@ -1,3 +1,16 @@
+
+  function update_valor(id,action) {
+    if (action == 'plus') {
+      document.getElementById(id).innerHTML =  parseInt(document.getElementById(id).innerHTML) +1;
+    }
+    if (action == 'minus') {
+        if (parseInt(document.getElementById(id).innerHTML) != 0) {
+          document.getElementById(id).innerHTML =  parseInt(document.getElementById(id).innerHTML) -1;
+        }
+    }
+  }
+
+
 function get_qr() 
 {
 	// Cambiar a POST y meter datos en json
@@ -23,58 +36,15 @@ function get_qr()
 			$('#result').html(html);
 		}
 	};
-	var allInputs =$('input.order')
+	var allInputs =$('em.order')
 	var i=0;
 	var jsonData = {};
 	
 	for (i=0;i<allInputs.length;i++) {
 		//console.log(allInputs[i])
 		//console.log(allInputs[i])
-		console.log(allInputs[i])
-		name =allInputs[i]['name']
-		if ($(allInputs[i]).is('select')) {
-			jsonData[name] =$(allInputs[i]).val()
-			//console.log('select',allInputs[i]['id'],$(allInputs[i]).val())
-		}
-		if ($(allInputs[i]).is('range')) {
-			valor =$(allInputs[i]).val()
-			if (valor == "") {
-				valor="0"
-			}
-			jsonData[name] =valor
-			//console.log('range',allInputs[i]['id'],$(allInputs[i]).val())
-		}
-		if ($(allInputs[i]).is('span')) {
-			valor =$(allInputs[i]).text()
-			if (valor == "") {
-				valor="0"
-			}
-			jsonData[name] =valor
-			//console.log('span',allInputs[i]['id'],$(allInputs[i]).text())
-		}
-		if ($(allInputs[i]).is('input')) {
-			type =$(allInputs[i]).prop('type')
-			//console.log(type)
-			if ($(allInputs[i]).type == 'range') 
-			{
-				valor =$(allInputs[i]).val()
-				if (valor == "") {
-					valor="0"
-				}
-				jsonData[name] =valor
-				//console.log(allInputs[i]['id'],$(allInputs[i]).val())
-			}
-			else {
-				valor =allInputs[i].value
-				if (valor == "") {
-					valor="0"
-				}
-				jsonData[name] =valor
-				//console.log(allInputs[i]['id'],allInputs[i].value)
-			}
-		}
-		console.log(name,jsonData[name])
-
+		name =allInputs[i]['id']
+		jsonData[name] =parseInt(allInputs[i].innerHTML)
 	}
 	// Create json with the request data
 	level ="data_form"

@@ -80,8 +80,35 @@ h3 {
   display: inline-block;
   font-size: 16px;
 }
+
+.button_plus {
+  background-color: rgb(0,135,68); /* Green */
+  border: 1px;
+  color: white;
+  padding: 15px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button_minus {
+  background-color: rgb(156,0,68); /* Green */
+  border: 1px;
+  color: white;
+  padding: 15px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 </style>
 
+
+<script>
+
+
+</script>
 
 <body>
   <!--[if IE]>
@@ -95,28 +122,40 @@ h3 {
   <h3>RES&nbsp;<span class="burgerbun">BURGERBUN</span>
     <span class="burgerbun">..............................................</span>
     <span class="precio">18.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_res').innerHTML = this.value;" step="1" name="value_res" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_res','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_res','minus');" name="value_res" value="-"></input>
       <em id="range_res" class="order">0</em>
   </h3>
 
   <h3>PULPO&nbsp;<span class="burgerbun">BURGERBUN</span>
     <span class="burgerbun">........................................</span>
     <span class="precio">18.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_pulpo').innerHTML = this.value;" step="1" name="value_pulpo" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_pulpo','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_pulpo','minus');" name="value_res" value="-"></input>
       <em id="range_pulpo" class="order">0</em>
   </h3>
 
   <h3>POLLO CURRY&nbsp;<span class="burgerbun">BURGERBUN</span>
     <span class="burgerbun">........................</span>
     <span class="precio">14.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_pollo_curry').innerHTML = this.value;" step="1" name="value_pollo_curry" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_pollo_curry','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_pollo_curry','minus');" name="value_res" value="-"></input>
       <em id="range_pollo_curry" class="order">0</em>
   </h3>  
 
   <h3>POLLO CIRUELA&nbsp;<span class="burgerbun">BURGERBUN</span>
     <span class="burgerbun">....................</span>
     <span class="precio">14.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_pollo_ciruela').innerHTML = this.value;" step="1" name="value_pollo_ciruela" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_pollo_ciruela','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_pollo_ciruela','minus');" name="value_res" value="-"></input>
       <em id="range_pollo_ciruela" class="order">0</em>
   </h3>  
 
@@ -130,14 +169,20 @@ h3 {
   <h3>VEGGIE&nbsp;<span class="burgerbun">BURGERBUN</span>
     <span class="burgerbun">.....................................</span>
     <span class="precio">13.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_veggie').innerHTML = this.value;" step="1" name="value_veggie" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_veggie','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_veggie','minus');" name="value_res" value="-"></input>
       <em id="range_veggie" class="order">0</em>
   </h3>  
 
   <h3>CERDO&nbsp;<span class="burgerbun">BURGERBUN</span>
     <span class="burgerbun">.......................................</span>
     <span class="precio">13.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_cerdo').innerHTML = this.value;" step="1" name="value_cerdo" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_cerdo','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_cerdo','minus');" name="value_res" value="-"></input>
       <em id="range_cerdo" class="order">0</em>
   </h3>  
 
@@ -146,14 +191,20 @@ h3 {
   <h3>PAPAS CASERAS SAL COMINO&nbsp;
     <span class="burgerbun">....................</span>
     <span class="precio">4.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_papas').innerHTML = this.value;" step="1" name="value_papas" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_papas','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_papas','minus');" name="value_res" value="-"></input>
       <em id="range_papas" class="order">0</em>
   </h3>
 
   <h3>BASTONES DE ZANAHORIA&nbsp;
     <span class="burgerbun">.........................</span>
     <span class="precio">5.5</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_bastones').innerHTML = this.value;" step="1" name="value_bastones" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_bastones','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_bastones','minus');" name="value_res" value="-"></input>
       <em id="range_bastones" class="order">0</em>
   </h3>
 
@@ -162,21 +213,30 @@ h3 {
   <h3>AGUA FILTRADA EN ORIGEN&nbsp;
     <span class="burgerbun">......................</span>
     <span class="precio">&nbsp;&nbsp;&nbsp;3</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_agua').innerHTML = this.value;" step="1" name="value_agua" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_agua','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_agua','minus');" name="value_res" value="-"></input>
       <em id="range_agua" class="order">0</em>
   </h3>
 
   <h3>SODAS ARTESANALES&nbsp;
     <span class="burgerbun">...................................</span>
     <span class="precio">5.5</span>&nbsp;&nbsp; 
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_sodas').innerHTML = this.value;" step="1" name="value_sodas" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_sodas','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_sodas','minus');" name="value_res" value="-"></input>
       <em id="range_sodas" class="order">0</em>
   </h3>
 
   <h3>CERVEZAS&nbsp;
     <span class="burgerbun">.........................................................</span>
     <span class="precio">7.5</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_cervezas').innerHTML = this.value;" step="1" name="value_cervezas" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_cervezas','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_cervezas','minus');" name="value_res" value="-"></input>
       <em id="range_cervezas" class="order">0</em>
   </h3>
 
@@ -185,14 +245,20 @@ h3 {
   <h3>CINA&nbsp;<span class="burgerbun">BUN</span>
     <span class="burgerbun">............................................................</span>
     <span class="precio">5.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_cina').innerHTML = this.value;" step="1" name="value_cina" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_cina','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_cina','minus');" name="value_res" value="-"></input>
       <em id="range_cina" class="order">0</em>
   </h3>
 
   <h3>DONUT&nbsp;<span class="burgerbun">BUN</span>
     <span class="burgerbun">........................................................</span>
     <span class="precio">5.9</span>&nbsp;&nbsp;
-      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_donut').innerHTML = this.value;" step="1" name="value_donut" id="rangeVal" value="0"></input>
+      <input type ="button" class="button_plus" max="10" min="0" class="order" 
+      onclick="update_valor('range_donut','plus');" step="1" name="value_res" id="rangeVal" value="+"></input>
+      <input type ="button" class="button_minus" max="10" min="0" class="order"
+      onclick="update_valor('range_donut','minus');" name="value_res" value="-"></input>
       <em id="range_donut" class="order">0</em>
   </h3>
 
