@@ -1,0 +1,217 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<style>
+body {
+  background-color: rgb(27, 25, 26);
+  padding: 35px;
+}
+h1 {
+  color: white;
+  font-size: 60px;
+}
+h2 {
+  color: white;
+  font-size: 50px;
+}
+
+h3 {
+  color: white;
+  font-size: 30px;
+}
+
+
+.burgerbun {
+  color: rgb(156,135,68);
+}
+
+.precio {
+  color: white;
+  font-size: 25px;
+}
+
+.customHr {
+    width: 7%;
+    font-size: 1px;
+    color: rgba(156,135,68,0);
+    line-height: 5px;
+
+    background-color: rgb(156,135,68);
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+
+.order {
+    font-size: 20px;
+    text-align: right;
+    vertical-align: middle;
+    color:white;
+}
+
+.num_items {
+    font-size: 20px;
+    text-align: right;
+    color:white;
+}
+
+.button {
+  background-color: rgb(156,135,68); /* Green */
+  border: 1px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <h1>BAOBUN</h1>
+  <h2>BURGERBUN</h2>
+  <div class="customHr">.</div>
+  <h3>RES&nbsp;<span class="burgerbun">BURGERBUN</span>
+    <span class="burgerbun">..............................................</span>
+    <span class="precio">18.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_res').innerHTML = this.value;" step="1" name="value_res" id="rangeVal" value="0"></input>
+      <em id="range_res" class="order">0</em>
+  </h3>
+
+  <h3>PULPO&nbsp;<span class="burgerbun">BURGERBUN</span>
+    <span class="burgerbun">........................................</span>
+    <span class="precio">18.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_pulpo').innerHTML = this.value;" step="1" name="value_pulpo" id="rangeVal" value="0"></input>
+      <em id="range_pulpo" class="order">0</em>
+  </h3>
+
+  <h3>POLLO CURRY&nbsp;<span class="burgerbun">BURGERBUN</span>
+    <span class="burgerbun">........................</span>
+    <span class="precio">14.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_pollo_curry').innerHTML = this.value;" step="1" name="value_pollo_curry" id="rangeVal" value="0"></input>
+      <em id="range_pollo_curry" class="order">0</em>
+  </h3>  
+
+  <h3>POLLO CIRUELA&nbsp;<span class="burgerbun">BURGERBUN</span>
+    <span class="burgerbun">....................</span>
+    <span class="precio">14.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_pollo_ciruela').innerHTML = this.value;" step="1" name="value_pollo_ciruela" id="rangeVal" value="0"></input>
+      <em id="range_pollo_ciruela" class="order">0</em>
+  </h3>  
+
+  <h3>CAMARON&nbsp;<span class="burgerbun">BURGERBUN</span>
+    <span class="burgerbun">................................</span>
+    <span class="precio">16.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_camaron').innerHTML = this.value;" step="1" name="value_camaron" id="rangeVal" value="0"></input>
+      <em id="range_camaron" class="order">0</em>
+  </h3>  
+
+  <h3>VEGGIE&nbsp;<span class="burgerbun">BURGERBUN</span>
+    <span class="burgerbun">.....................................</span>
+    <span class="precio">13.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_veggie').innerHTML = this.value;" step="1" name="value_veggie" id="rangeVal" value="0"></input>
+      <em id="range_veggie" class="order">0</em>
+  </h3>  
+
+  <h3>CERDO&nbsp;<span class="burgerbun">BURGERBUN</span>
+    <span class="burgerbun">.......................................</span>
+    <span class="precio">13.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_cerdo').innerHTML = this.value;" step="1" name="value_cerdo" id="rangeVal" value="0"></input>
+      <em id="range_cerdo" class="order">0</em>
+  </h3>  
+
+  <h2>ACOMPAÑAMIENTOS</h2>
+  <div class="customHr">.</div>
+  <h3>PAPAS CASERAS SAL COMINO&nbsp;
+    <span class="burgerbun">....................</span>
+    <span class="precio">4.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_papas').innerHTML = this.value;" step="1" name="value_papas" id="rangeVal" value="0"></input>
+      <em id="range_papas" class="order">0</em>
+  </h3>
+
+  <h3>BASTONES DE ZANAHORIA&nbsp;
+    <span class="burgerbun">.........................</span>
+    <span class="precio">5.5</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_bastones').innerHTML = this.value;" step="1" name="value_bastones" id="rangeVal" value="0"></input>
+      <em id="range_bastones" class="order">0</em>
+  </h3>
+
+  <h2>BEBIDAS</h2>
+  <div class="customHr">.</div>
+  <h3>AGUA FILTRADA EN ORIGEN&nbsp;
+    <span class="burgerbun">......................</span>
+    <span class="precio">&nbsp;&nbsp;&nbsp;3</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_agua').innerHTML = this.value;" step="1" name="value_agua" id="rangeVal" value="0"></input>
+      <em id="range_agua" class="order">0</em>
+  </h3>
+
+  <h3>SODAS ARTESANALES&nbsp;
+    <span class="burgerbun">...................................</span>
+    <span class="precio">5.5</span>&nbsp;&nbsp; 
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_sodas').innerHTML = this.value;" step="1" name="value_sodas" id="rangeVal" value="0"></input>
+      <em id="range_sodas" class="order">0</em>
+  </h3>
+
+  <h3>CERVEZAS&nbsp;
+    <span class="burgerbun">.........................................................</span>
+    <span class="precio">7.5</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_cervezas').innerHTML = this.value;" step="1" name="value_cervezas" id="rangeVal" value="0"></input>
+      <em id="range_cervezas" class="order">0</em>
+  </h3>
+
+  <h2>POSTRES</h2>
+  <div class="customHr">.</div>
+  <h3>CINA&nbsp;<span class="burgerbun">BUN</span>
+    <span class="burgerbun">............................................................</span>
+    <span class="precio">5.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_cina').innerHTML = this.value;" step="1" name="value_cina" id="rangeVal" value="0"></input>
+      <em id="range_cina" class="order">0</em>
+  </h3>
+
+  <h3>DONUT&nbsp;<span class="burgerbun">BUN</span>
+    <span class="burgerbun">........................................................</span>
+    <span class="precio">5.9</span>&nbsp;&nbsp;
+      <input type ="range" max="10" min="0" class="order" oninput="document.getElementById('range_donut').innerHTML = this.value;" step="1" name="value_donut" id="rangeVal" value="0"></input>
+      <em id="range_donut" class="order">0</em>
+  </h3>
+
+  <input type="button" onclick="get_qr()" class="button" value="Realizar pedido"></input>
+  <h3 id="result"></h3>
+  <img id="my_image" src=''></img>
+
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
